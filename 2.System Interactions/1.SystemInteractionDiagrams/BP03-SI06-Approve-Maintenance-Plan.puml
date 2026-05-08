@@ -1,0 +1,11 @@
+@startuml
+title BP03 - SI06-Approve Maintenance Plan
+
+start
+:Receive approval decision;
+:Set maintenance plan enrollment status to approved;
+:Activate maintenance plan coverage;
+:Trigger approval notification;
+stop
+
+@enduml

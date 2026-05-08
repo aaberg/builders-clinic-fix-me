@@ -1,0 +1,11 @@
+@startuml
+title BP05 - SI01-Start Cancel Maintenance Slot
+
+start
+:Receive cancellation request;
+:Validate maintenance slot exists;
+:Set cancellation status to pending provider cancellation;
+:Send cancellation task to back office;
+stop
+
+@enduml

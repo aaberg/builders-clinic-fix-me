@@ -1,0 +1,15 @@
+@startuml
+title BP02 - SI04-Add Account Information
+
+start
+:Receive onboarding information;
+:Validate required account details;
+if (Information complete?) then (yes)
+  :Update customer account profile;
+  :Determine whether more onboarding is required;
+else (no)
+  :Return missing information errors;
+endif
+stop
+
+@enduml

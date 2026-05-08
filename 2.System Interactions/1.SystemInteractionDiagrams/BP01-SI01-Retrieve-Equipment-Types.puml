@@ -1,0 +1,15 @@
+@startuml
+title BP01 - SI01-Retrieve Equipment Types
+
+start
+:Receive request to register new equipment;
+:Identify customer context;
+:Retrieve available equipment types;
+if (Equipment types found?) then (yes)
+  :Return equipment type list to customer workflow;
+else (no)
+  :Return empty list or retrieval error;
+endif
+stop
+
+@enduml

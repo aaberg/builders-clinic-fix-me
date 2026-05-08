@@ -1,0 +1,11 @@
+@startuml
+title BP05 - SI02-Confirm Cancel Maintenance Slot
+
+start
+:Receive provider cancellation confirmation;
+:Update maintenance slot status to cancelled;
+:Store cancellation timestamp and notes;
+:Trigger customer cancellation notification;
+stop
+
+@enduml

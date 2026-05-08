@@ -1,0 +1,15 @@
+@startuml
+title BP05 - SI03-Notify Cancel Slot confirmed
+
+start
+:Load cancelled maintenance slot;
+:Build cancellation confirmation message;
+:Send cancellation confirmation email;
+if (Email sent?) then (yes)
+  :Record notification as sent;
+else (no)
+  :Record notification failure for retry;
+endif
+stop
+
+@enduml

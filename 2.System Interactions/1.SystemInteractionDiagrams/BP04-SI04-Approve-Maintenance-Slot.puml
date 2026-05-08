@@ -1,0 +1,11 @@
+@startuml
+title BP04 - SI04-Approve Maintenance Slot
+
+start
+:Receive customer agreement;
+:Confirm proposed maintenance slot;
+:Update slot status to approved;
+:Trigger confirmation notification;
+stop
+
+@enduml

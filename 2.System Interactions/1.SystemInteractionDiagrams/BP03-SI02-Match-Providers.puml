@@ -1,0 +1,15 @@
+@startuml
+title BP03 - SI02-Match Providers
+
+start
+:Receive selected equipment;
+:Read equipment type and service needs;
+:Find providers matching equipment and location;
+if (Providers found?) then (yes)
+  :Return provider options;
+else (no)
+  :Return no matching providers message;
+endif
+stop
+
+@enduml
