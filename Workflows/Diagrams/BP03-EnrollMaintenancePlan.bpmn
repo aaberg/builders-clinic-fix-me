@@ -74,13 +74,13 @@
       <bpmn:outgoing>Flow_0i83zsl</bpmn:outgoing>
       <bpmn:messageEventDefinition id="MessageEventDefinition_15y2nz1" />
     </bpmn:intermediateCatchEvent>
-    <bpmn:task id="Activity_0b2foso" name="SI.Get Equipment List">
+    <bpmn:task id="Activity_0b2foso" name="SI-Get Equipment List">
       <bpmn:incoming>Flow_0i83zsl</bpmn:incoming>
     </bpmn:task>
     <bpmn:intermediateCatchEvent id="Event_0hof2ql">
       <bpmn:messageEventDefinition id="MessageEventDefinition_02t3107" />
     </bpmn:intermediateCatchEvent>
-    <bpmn:task id="Activity_1r16b41" name="SI.Begin Enroll Maintenance Plan">
+    <bpmn:task id="Activity_1r16b41" name="SI-Begin Enroll Maintenance Plan">
       <bpmn:incoming>Flow_0mhb8cj</bpmn:incoming>
       <bpmn:outgoing>Flow_0332m3g</bpmn:outgoing>
     </bpmn:task>
@@ -88,13 +88,13 @@
       <bpmn:outgoing>Flow_0mhb8cj</bpmn:outgoing>
       <bpmn:messageEventDefinition id="MessageEventDefinition_0hyl31h" />
     </bpmn:intermediateCatchEvent>
-    <bpmn:task id="Activity_03jeauz" name="SI.Match Providers" />
+    <bpmn:task id="Activity_03jeauz" name="SI-Match Providers" />
     <bpmn:intermediateCatchEvent id="Event_1lvmgqe">
       <bpmn:incoming>Flow_0332m3g</bpmn:incoming>
       <bpmn:outgoing>Flow_1yf22qk</bpmn:outgoing>
       <bpmn:messageEventDefinition id="MessageEventDefinition_199kg07" />
     </bpmn:intermediateCatchEvent>
-    <bpmn:task id="Activity_016il48" name="SI.Add Information To Enroll Maintenance Plan">
+    <bpmn:task id="Activity_016il48" name="SI-Add Information To Enroll Maintenance Plan">
       <bpmn:incoming>Flow_1yf22qk</bpmn:incoming>
       <bpmn:outgoing>Flow_0g3f6zd</bpmn:outgoing>
     </bpmn:task>
@@ -108,7 +108,7 @@
       <bpmn:outgoing>Flow_0gbv0a4</bpmn:outgoing>
       <bpmn:messageEventDefinition id="MessageEventDefinition_0vtsphb" />
     </bpmn:intermediateCatchEvent>
-    <bpmn:task id="Activity_04zyvwf" name="SI. Reject Maintenance Plan">
+    <bpmn:task id="Activity_04zyvwf" name="SI-Reject Maintenance Plan">
       <bpmn:incoming>Flow_0gbv0a4</bpmn:incoming>
       <bpmn:outgoing>Flow_0kkwumy</bpmn:outgoing>
     </bpmn:task>
@@ -123,7 +123,7 @@
     <bpmn:sequenceFlow id="Flow_0jux20b" sourceRef="Gateway_1c6jlhc" targetRef="Event_0j3x9ta" />
     <bpmn:sequenceFlow id="Flow_0gbv0a4" sourceRef="Event_0j3x9ta" targetRef="Activity_04zyvwf" />
     <bpmn:sequenceFlow id="Flow_0jl2kx4" sourceRef="Gateway_1c6jlhc" targetRef="Event_0exqnip" />
-    <bpmn:task id="Activity_0f6ld3u" name="SI. Approve Maintenance Plan">
+    <bpmn:task id="Activity_0f6ld3u" name="SI-Approve Maintenance Plan">
       <bpmn:incoming>Flow_1e9oio5</bpmn:incoming>
       <bpmn:outgoing>Flow_18a4ggh</bpmn:outgoing>
     </bpmn:task>
@@ -140,12 +140,12 @@
     </bpmn:intermediateCatchEvent>
     <bpmn:sequenceFlow id="Flow_18a4ggh" sourceRef="Activity_0f6ld3u" targetRef="Event_0qovxo6" />
     <bpmn:sequenceFlow id="Flow_0js6lnz" sourceRef="Event_0qovxo6" targetRef="Activity_1211dh3" />
-    <bpmn:task id="Activity_1211dh3" name="SI. Notify Reject Maintenance Plan">
+    <bpmn:task id="Activity_1211dh3" name="SI-Notify Reject Maintenance Plan">
       <bpmn:incoming>Flow_0js6lnz</bpmn:incoming>
       <bpmn:outgoing>Flow_1ylkz97</bpmn:outgoing>
     </bpmn:task>
     <bpmn:sequenceFlow id="Flow_1ylkz97" sourceRef="Activity_1211dh3" targetRef="Event_1bv91xi" />
-    <bpmn:task id="Activity_0a6vqh2" name="SI. Notify Reject Maintenance Plan">
+    <bpmn:task id="Activity_0a6vqh2" name="SI-Notify Reject Maintenance Plan">
       <bpmn:incoming>Flow_1bzfqez</bpmn:incoming>
       <bpmn:outgoing>Flow_1rl3c00</bpmn:outgoing>
     </bpmn:task>

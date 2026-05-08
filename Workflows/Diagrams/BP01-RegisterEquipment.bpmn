@@ -73,14 +73,14 @@
     </bpmn:intermediateCatchEvent>
     <bpmn:sequenceFlow id="Flow_0mpy8tg" sourceRef="Event_17knlav" targetRef="Activity_18at6wu" />
     <bpmn:sequenceFlow id="Flow_0vp6qj4" sourceRef="Event_1czc40q" targetRef="Activity_0htbb07" />
-    <bpmn:task id="Activity_18at6wu" name="Si.Retrieve Equipment Types">
+    <bpmn:task id="Activity_18at6wu" name="SI-Retrieve Equipment Types">
       <bpmn:incoming>Flow_0mpy8tg</bpmn:incoming>
     </bpmn:task>
     <bpmn:intermediateCatchEvent id="Event_1czc40q">
       <bpmn:outgoing>Flow_0vp6qj4</bpmn:outgoing>
       <bpmn:messageEventDefinition id="MessageEventDefinition_1xc2av6" />
     </bpmn:intermediateCatchEvent>
-    <bpmn:task id="Activity_0htbb07" name="Si.Retrieve Equipment Registration Form">
+    <bpmn:task id="Activity_0htbb07" name="SI-Retrieve Equipment Registration Form">
       <bpmn:incoming>Flow_0vp6qj4</bpmn:incoming>
     </bpmn:task>
     <bpmn:intermediateCatchEvent id="Event_0ndqbc2">
@@ -88,7 +88,7 @@
       <bpmn:messageEventDefinition id="MessageEventDefinition_06cdzpw" />
     </bpmn:intermediateCatchEvent>
     <bpmn:sequenceFlow id="Flow_19thlp2" sourceRef="Event_0ndqbc2" targetRef="Activity_1u2f60f" />
-    <bpmn:task id="Activity_1u2f60f" name="SI.Register Equipment">
+    <bpmn:task id="Activity_1u2f60f" name="SI-Register Equipment">
       <bpmn:incoming>Flow_19thlp2</bpmn:incoming>
       <bpmn:outgoing>Flow_0bwg4iq</bpmn:outgoing>
     </bpmn:task>
@@ -98,7 +98,7 @@
       <bpmn:messageEventDefinition id="MessageEventDefinition_037l4jh" />
     </bpmn:intermediateCatchEvent>
     <bpmn:sequenceFlow id="Flow_0bwg4iq" sourceRef="Activity_1u2f60f" targetRef="Event_1qwo9ig" />
-    <bpmn:task id="Activity_0aey2f9" name="SI.Add equipment information">
+    <bpmn:task id="Activity_0aey2f9" name="SI-Add equipment information">
       <bpmn:incoming>Flow_0cmnufx</bpmn:incoming>
       <bpmn:outgoing>Flow_117hzra</bpmn:outgoing>
     </bpmn:task>
@@ -110,7 +110,7 @@
       <bpmn:outgoing>Flow_1nzqinc</bpmn:outgoing>
       <bpmn:messageEventDefinition id="MessageEventDefinition_11kirbm" />
     </bpmn:intermediateCatchEvent>
-    <bpmn:task id="Activity_0ltgwum" name="SI.Finallize Equipment">
+    <bpmn:task id="Activity_0ltgwum" name="SI-Finallize Equipment">
       <bpmn:incoming>Flow_1nzqinc</bpmn:incoming>
       <bpmn:outgoing>Flow_04slm5s</bpmn:outgoing>
     </bpmn:task>
@@ -131,7 +131,7 @@
       <bpmn:outgoing>Flow_0qj4rdk</bpmn:outgoing>
       <bpmn:messageEventDefinition id="MessageEventDefinition_0r3mwnj" />
     </bpmn:intermediateCatchEvent>
-    <bpmn:userTask id="Activity_16piyck" name="SI.Check registration">
+    <bpmn:userTask id="Activity_16piyck" name="SI-Check registration">
       <bpmn:incoming>Flow_0qj4rdk</bpmn:incoming>
       <bpmn:outgoing>Flow_1h6apst</bpmn:outgoing>
     </bpmn:userTask>

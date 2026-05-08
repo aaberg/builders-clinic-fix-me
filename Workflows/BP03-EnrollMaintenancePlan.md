@@ -12,11 +12,11 @@ The intention is to guide a customer from maintenance-plan enrollment request th
 
 ## System Interactions
 
-- SI.Get Equipment List
-- SI.Match Providers
-- SI.Begin Enroll Maintenance Plan
-- SI.Add Information To Enroll Maintenance Plan
-- SI. Reject Maintenance Plan
-- SI. Approve Maintenance Plan
-- SI. Notify Reject Maintenance Plan
-- SI. Notify Reject Maintenance Plan
+- SI-Get Equipment List
+- SI-Match Providers
+- SI-Begin Enroll Maintenance Plan
+- SI-Add Information To Enroll Maintenance Plan
+- SI-Reject Maintenance Plan
+- SI-Approve Maintenance Plan
+- SI-Notify Reject Maintenance Plan
+- SI-Notify Reject Maintenance Plan

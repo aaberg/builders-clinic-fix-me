@@ -12,9 +12,9 @@ The intention is to capture all information needed to create a valid equipment r
 
 ## System Interactions
 
-- SI.Retrieve Equipment Types
-- SI.Retrieve Equipment Registration Form
-- SI.Register Equipment
-- SI.Check registration
-- SI.Add equipment information
-- SI.Finallize Equipment
+- SI-Retrieve Equipment Types
+- SI-Retrieve Equipment Registration Form
+- SI-Register Equipment
+- SI-Check registration
+- SI-Add equipment information
+- SI-Finallize Equipment

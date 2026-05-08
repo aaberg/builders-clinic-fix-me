@@ -91,7 +91,7 @@
     <bpmn:sequenceFlow id="Flow_05sca6k" sourceRef="Event_1tutl29" targetRef="Activity_1uwspkv" />
     <bpmn:sequenceFlow id="Flow_1b803vb" sourceRef="Activity_0tbndkk" targetRef="Event_1tutl29" />
     <bpmn:sequenceFlow id="Flow_1friaun" sourceRef="Activity_1uwspkv" targetRef="Event_1xsxf53" />
-    <bpmn:task id="Activity_1uwspkv" name="SI.02&#10;Confirm Account Registration">
+    <bpmn:task id="Activity_1uwspkv" name="SI-Confirm Account Registration">
       <bpmn:incoming>Flow_05sca6k</bpmn:incoming>
       <bpmn:outgoing>Flow_1friaun</bpmn:outgoing>
     </bpmn:task>
@@ -100,7 +100,7 @@
       <bpmn:outgoing>Flow_1qa3lwt</bpmn:outgoing>
       <bpmn:messageEventDefinition id="MessageEventDefinition_0zxlccp" />
     </bpmn:intermediateCatchEvent>
-    <bpmn:task id="Activity_1k6rxve" name="SI.01&#10;Initiate Account Registration">
+    <bpmn:task id="Activity_1k6rxve" name="SI-Initiate Account Registration">
       <bpmn:incoming>Flow_1qa3lwt</bpmn:incoming>
       <bpmn:outgoing>Flow_109rqal</bpmn:outgoing>
     </bpmn:task>
@@ -112,7 +112,7 @@
     </bpmn:intermediateCatchEvent>
     <bpmn:sequenceFlow id="Flow_109rqal" sourceRef="Activity_1k6rxve" targetRef="Event_0niao1k" />
     <bpmn:sequenceFlow id="Flow_1ld7wra" sourceRef="Event_0niao1k" targetRef="Activity_0tbndkk" />
-    <bpmn:task id="Activity_0tbndkk" name="SI.04&#10;Send Account Registration Notification">
+    <bpmn:task id="Activity_0tbndkk" name="SI-Send Account Registration Notification">
       <bpmn:incoming>Flow_1ld7wra</bpmn:incoming>
       <bpmn:outgoing>Flow_1b803vb</bpmn:outgoing>
     </bpmn:task>
@@ -126,7 +126,7 @@
       <bpmn:outgoing>Flow_12uxhy4</bpmn:outgoing>
       <bpmn:messageEventDefinition id="MessageEventDefinition_101aep8" />
     </bpmn:intermediateCatchEvent>
-    <bpmn:task id="Activity_03kk13q" name="SI.03&#10;Add Account Information">
+    <bpmn:task id="Activity_03kk13q" name="SI-Add Account Information">
       <bpmn:incoming>Flow_12uxhy4</bpmn:incoming>
       <bpmn:outgoing>Flow_0v5mrx8</bpmn:outgoing>
     </bpmn:task>

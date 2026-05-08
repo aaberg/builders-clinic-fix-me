@@ -12,7 +12,7 @@ The intention is to create and activate a customer account, confirm ownership th
 
 ## System Interactions
 
-- SI.01 Initiate Account Registration
-- SI.02 Confirm Account Registration
-- SI.03 Add Account Information
-- SI.04 Send Account Registration Notification
+- SI-Initiate Account Registration
+- SI-Confirm Account Registration
+- SI-Add Account Information
+- SI-Send Account Registration Notification
