@@ -1,0 +1,15 @@
+@startuml
+title BP01 - SI-Add equipment information
+
+start
+:Receive requested additional equipment information;
+:Validate submitted information;
+if (Information is complete) then (yes)
+  :Update pending equipment registration;
+  :Send updated registration for approval decision;
+else (no)
+  :Request missing or corrected information;
+endif
+stop
+
+@enduml

@@ -1,0 +1,15 @@
+@startuml
+title BP01 - SI-Check registration
+
+start
+:Receive pending equipment registration;
+:Review submitted equipment details;
+:Check whether additional information is required;
+if (Additional information required?) then (yes)
+  :Request additional information from customer;
+else (no)
+  :Prepare approval or denial decision;
+endif
+stop
+
+@enduml

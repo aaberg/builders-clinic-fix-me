@@ -1,0 +1,11 @@
+@startuml
+title BP03 - SI-Add Information To Enroll Maintenance Plan
+
+start
+:Receive validated maintenance plan information;
+:Update enrollment request details;
+:Store back-office validation notes;
+:Evaluate whether request should be approved or rejected;
+stop
+
+@enduml

@@ -1,0 +1,16 @@
+@startuml
+title BP04 - SI-Notify Customer Of Available Slot
+
+start
+:Load proposed maintenance slot;
+:Load customer contact details;
+:Build available slot notification;
+:Send notification to customer;
+if (Notification sent?) then (yes)
+  :Record notification as sent;
+else (no)
+  :Record notification failure for retry;
+endif
+stop
+
+@enduml
