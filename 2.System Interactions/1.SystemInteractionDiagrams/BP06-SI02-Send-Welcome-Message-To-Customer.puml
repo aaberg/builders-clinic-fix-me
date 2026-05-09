@@ -1,0 +1,16 @@
+@startuml
+
+partition "BP06 - SI02-Send Welcome Message To Customer" {
+  start
+  :Receive channel created event;
+  :Prepare welcome message;
+  :Send welcome message to customer through WhatsApp;
+  if (Message is sent) then (yes)
+    :Record welcome message delivery;
+  else (no)
+    :Record delivery failure;
+  endif
+  stop
+}
+
+@enduml
