@@ -16,7 +16,7 @@ The intention is to create and activate a customer account, confirm ownership th
 
 ## System Interactions
 
-- SI01-Initiate Account Registration
-- SI02-Send Account Registration Notification
-- SI03-Confirm Account Registration
-- SI04-Add Account Information
+- [SI01-Initiate Account Registration](../2.System%20Interactions/BP02-SI01-Initiate-Account-Registration.md)
+- [SI02-Send Account Registration Notification](../2.System%20Interactions/BP02-SI02-Send-Account-Registration-Notification.md)
+- [SI03-Confirm Account Registration](../2.System%20Interactions/BP02-SI03-Confirm-Account-Registration.md)
+- [SI04-Add Account Information](../2.System%20Interactions/BP02-SI04-Add-Account-Information.md)

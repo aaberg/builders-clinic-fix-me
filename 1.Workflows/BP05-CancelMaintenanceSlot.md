@@ -16,6 +16,6 @@ The intention is to ensure a maintenance slot cancellation is coordinated with t
 
 ## System Interactions
 
-- SI01-Start Cancel Maintenance Slot
-- SI02-Confirm Cancel Maintenance Slot
-- SI03-Notify Cancel Slot confirmed
+- [SI01-Start Cancel Maintenance Slot](../2.System%20Interactions/BP05-SI01-Start-Cancel-Maintenance-Slot.md)
+- [SI02-Confirm Cancel Maintenance Slot](../2.System%20Interactions/BP05-SI02-Confirm-Cancel-Maintenance-Slot.md)
+- [SI03-Notify Cancel Slot confirmed](../2.System%20Interactions/BP05-SI03-Notify-Cancel-Slot-confirmed.md)

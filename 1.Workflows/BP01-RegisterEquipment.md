@@ -16,9 +16,9 @@ The intention is to capture all information needed to create a valid equipment r
 
 ## System Interactions
 
-- SI01-Retrieve Equipment Types
-- SI02-Retrieve Equipment Registration Form
-- SI03-Register Equipment
-- SI04-Check registration
-- SI05-Add equipment information
-- SI06-Finallize Equipment
+- [SI01-Retrieve Equipment Types](../2.System%20Interactions/BP01-SI01-Retrieve-Equipment-Types.md)
+- [SI02-Retrieve Equipment Registration Form](../2.System%20Interactions/BP01-SI02-Retrieve-Equipment-Registration-Form.md)
+- [SI03-Register Equipment](../2.System%20Interactions/BP01-SI03-Register-Equipment.md)
+- [SI04-Check registration](../2.System%20Interactions/BP01-SI04-Check-registration.md)
+- [SI05-Add equipment information](../2.System%20Interactions/BP01-SI05-Add-equipment-information.md)
+- [SI06-Finallize Equipment](../2.System%20Interactions/BP01-SI06-Finallize-Equipment.md)
