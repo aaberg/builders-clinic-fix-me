@@ -2,6 +2,10 @@
 
 Source diagram: `1.WorkflowDiagrams /BP03-EnrollMaintenancePlan.bpmn`
 
+## Workflow Diagram
+
+![BP03 - Enroll Maintenance Plan](1.WorkflowDiagrams%20/BP03-EnrollMaintenancePlan.svg)
+
 ## Workflow Description
 
 This workflow lets a customer enroll equipment in a maintenance plan. The customer starts enrollment, chooses equipment, and selects a provider. The system retrieves eligible equipment, matches providers, begins the enrollment, and records additional enrollment information. Back office validates the request and either approves or rejects the maintenance plan, after which the system sends the customer a notification.

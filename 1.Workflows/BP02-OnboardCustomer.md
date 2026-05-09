@@ -2,6 +2,10 @@
 
 Source diagram: `1.WorkflowDiagrams /BP02-OnboardCustomer.bpmn`
 
+## Workflow Diagram
+
+![BP02 - Onboard Customer](1.WorkflowDiagrams%20/BP02-OnboardCustomer.svg)
+
 ## Workflow Description
 
 This workflow onboards a new customer account. The customer enters an email address, requests account creation, receives a registration email, follows the link, sets a password, activates the account, and completes any required extra onboarding information before being redirected to the search page.
