@@ -1,0 +1,16 @@
+@startuml
+
+partition "BP02 - SI02-Retrieve Equipment Registration Form" {
+  start
+  :Receive selected equipment type;
+  :Validate selected type exists;
+  :Retrieve registration form template;
+  if (Form template available?) then (yes)
+    :Return form fields and validation rules;
+  else (no)
+    :Return form unavailable error;
+  endif
+  stop
+}
+
+@enduml
