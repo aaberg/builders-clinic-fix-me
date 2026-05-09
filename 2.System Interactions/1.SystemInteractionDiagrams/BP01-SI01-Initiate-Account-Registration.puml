@@ -8,6 +8,7 @@ partition "BP01 - SI01-Initiate Account Registration" {
   if (Account can be created?) then (yes)
     :Create pending account registration;
     :Generate registration confirmation token;
+    :Broadcast Account Registered event;
   else (no)
     :Return registration error;
   endif
