@@ -1,6 +1,6 @@
 # Builders Clinic
 
-Builders Clinic documents customer-facing equipment and maintenance workflows, including equipment registration, customer onboarding, maintenance plan enrollment, maintenance slot scheduling, and slot cancellation.
+Builders Clinic documents customer-facing equipment and maintenance workflows, including equipment registration, customer onboarding, maintenance plan enrollment, maintenance slot scheduling, slot cancellation, and direct communication.
 
 ## Workflows
 
@@ -9,3 +9,4 @@ Builders Clinic documents customer-facing equipment and maintenance workflows, i
 - [BP03 - Enroll Maintenance Plan](1.Workflows/BP03-EnrollMaintenancePlan.md)
 - [BP04 - Schedule Maintenance Slot](1.Workflows/BP04-ScheduleMaintenanceSlot.md)
 - [BP05 - Cancel Maintenance Slot](1.Workflows/BP05-CancelMaintenanceSlot.md)
+- [BP06 - Direct Communication](1.Workflows/BP06-DirectCommunication.md)
