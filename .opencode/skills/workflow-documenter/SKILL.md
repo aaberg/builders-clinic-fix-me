@@ -197,6 +197,24 @@ Each Markdown file should include:
 - Title using `BP## - SI##-Name`.
 - `Description`: short summary of the system interaction.
 - `Diagram`: embedded SVG from `1.SystemInteractionDiagrams/`.
+- `Operations`: a table describing each operation in the interaction.
+
+The section order should be:
+
+1. `Description`
+2. `Diagram`
+3. `Operations`
+
+The `Operations` table must use these columns:
+
+| Column | Purpose |
+| --- | --- |
+| Operation | The system action or decision step. |
+| Input | Data, event, context, or decision result consumed by the operation. |
+| Output | Data, event, status, response, or side effect produced by the operation. |
+| Notes | A short implementation-oriented explanation of the operation. |
+
+Create one row for each operation in the system interaction. Derive rows from the corresponding PlantUML activity steps where possible, including success and error/retry outcomes when the diagram branches.
 
 Use this structure:
 
@@ -210,6 +228,13 @@ The system starts account registration from the customer's email address.
 ## Diagram
 
 ![BP01 - SI01-Initiate Account Registration](1.SystemInteractionDiagrams/BP01-SI01-Initiate-Account-Registration.svg)
+
+## Operations
+
+| Operation | Input | Output | Notes |
+| --- | --- | --- | --- |
+| Receive customer email address | Customer email address | Registration request captured | Starts account registration from the customer-provided email. |
+| Validate email format | Customer email address | Validated email or format error | Ensures the email can be used for account registration. |
 ```
 
 ## Rendering SVGs
@@ -257,6 +282,8 @@ After changes, verify:
 - Every `.puml` file has `start` and `stop` inside the partition.
 - Every `.puml` file has a matching `.svg` after rendering.
 - Every SI label has a matching Markdown file in `2.System Interactions/` with an embedded SVG.
+- Every system interaction Markdown file follows `Description`, `Diagram`, then `Operations` section order.
+- Every system interaction Markdown file has an `Operations` table with `Operation`, `Input`, `Output`, and `Notes` columns.
 - No old labels remain with `SI-Name`, `SI.Name`, `Si.Name`, or numbered forms like `SI-01 Name`.
 
 Useful searches:
