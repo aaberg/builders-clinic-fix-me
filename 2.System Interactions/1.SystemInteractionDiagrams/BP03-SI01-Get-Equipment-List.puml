@@ -1,15 +1,16 @@
 @startuml
-title BP03 - SI01-Get Equipment List
 
-start
-:Receive maintenance plan enrollment request;
-:Identify customer account;
-:Retrieve registered equipment for customer;
-if (Eligible equipment found?) then (yes)
-  :Return equipment list for selection;
-else (no)
-  :Return no eligible equipment message;
-endif
-stop
+partition "BP03 - SI01-Get Equipment List" {
+  start
+  :Receive maintenance plan enrollment request;
+  :Identify customer account;
+  :Retrieve registered equipment for customer;
+  if (Eligible equipment found?) then (yes)
+    :Return equipment list for selection;
+  else (no)
+    :Return no eligible equipment message;
+  endif
+  stop
+}
 
 @enduml

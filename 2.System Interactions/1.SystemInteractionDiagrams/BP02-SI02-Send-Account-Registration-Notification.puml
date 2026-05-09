@@ -1,15 +1,16 @@
 @startuml
-title BP02 - SI02-Send Account Registration Notification
 
-start
-:Receive pending account registration;
-:Build registration email with activation link;
-:Send account registration notification;
-if (Email sent?) then (yes)
-  :Record notification as sent;
-else (no)
-  :Record notification failure for retry;
-endif
-stop
+partition "BP02 - SI02-Send Account Registration Notification" {
+  start
+  :Receive pending account registration;
+  :Build registration email with activation link;
+  :Send account registration notification;
+  if (Email sent?) then (yes)
+    :Record notification as sent;
+  else (no)
+    :Record notification failure for retry;
+  endif
+  stop
+}
 
 @enduml

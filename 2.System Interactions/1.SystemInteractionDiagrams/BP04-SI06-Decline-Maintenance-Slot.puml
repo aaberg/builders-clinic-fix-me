@@ -1,11 +1,12 @@
 @startuml
-title BP04 - SI06-Decline Maintenance Slot
 
-start
-:Receive customer disagreement;
-:Mark proposed slot as declined;
-:Release or archive declined slot;
-:Restart scheduling to find another slot;
-stop
+partition "BP04 - SI06-Decline Maintenance Slot" {
+  start
+  :Receive customer disagreement;
+  :Mark proposed slot as declined;
+  :Release or archive declined slot;
+  :Restart scheduling to find another slot;
+  stop
+}
 
 @enduml

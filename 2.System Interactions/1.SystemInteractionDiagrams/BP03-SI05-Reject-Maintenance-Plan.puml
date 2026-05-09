@@ -1,11 +1,12 @@
 @startuml
-title BP03 - SI05-Reject Maintenance Plan
 
-start
-:Receive rejection decision;
-:Set maintenance plan enrollment status to rejected;
-:Store rejection reason;
-:Trigger rejection notification;
-stop
+partition "BP03 - SI05-Reject Maintenance Plan" {
+  start
+  :Receive rejection decision;
+  :Set maintenance plan enrollment status to rejected;
+  :Store rejection reason;
+  :Trigger rejection notification;
+  stop
+}
 
 @enduml

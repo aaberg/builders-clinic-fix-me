@@ -1,11 +1,12 @@
 @startuml
-title BP04 - SI01-Start Schedule Maintenance Slot
 
-start
-:Receive maintenance scheduling request;
-:Validate active maintenance plan;
-:Create scheduling request;
-:Send request to back office for contractor coordination;
-stop
+partition "BP04 - SI01-Start Schedule Maintenance Slot" {
+  start
+  :Receive maintenance scheduling request;
+  :Validate active maintenance plan;
+  :Create scheduling request;
+  :Send request to back office for contractor coordination;
+  stop
+}
 
 @enduml

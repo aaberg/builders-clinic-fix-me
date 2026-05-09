@@ -1,16 +1,17 @@
 @startuml
-title BP01 - SI06-Finallize Equipment
 
-start
-:Receive equipment approval or denial decision;
-if (Equipment approved?) then (yes)
-  :Activate equipment record;
-  :Store final registration status;
-  :Send registration completion email;
-else (no)
-  :Store denied registration status;
-  :Send denial notification;
-endif
-stop
+partition "BP01 - SI06-Finallize Equipment" {
+  start
+  :Receive equipment approval or denial decision;
+  if (Equipment approved?) then (yes)
+    :Activate equipment record;
+    :Store final registration status;
+    :Send registration completion email;
+  else (no)
+    :Store denied registration status;
+    :Send denial notification;
+  endif
+  stop
+}
 
 @enduml

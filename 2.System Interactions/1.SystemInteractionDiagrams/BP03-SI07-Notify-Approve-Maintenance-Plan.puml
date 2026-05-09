@@ -1,16 +1,17 @@
 @startuml
-title BP03 - SI07-Notify Approve Maintenance Plan
 
-start
-:Receive maintenance plan approval notification request;
-:Load customer contact details;
-:Build notification message with approval details;
-:Send notification email;
-if (Email sent?) then (yes)
-  :Record notification as sent;
-else (no)
-  :Record notification failure for retry;
-endif
-stop
+partition "BP03 - SI07-Notify Approve Maintenance Plan" {
+  start
+  :Receive maintenance plan approval notification request;
+  :Load customer contact details;
+  :Build notification message with approval details;
+  :Send notification email;
+  if (Email sent?) then (yes)
+    :Record notification as sent;
+  else (no)
+    :Record notification failure for retry;
+  endif
+  stop
+}
 
 @enduml

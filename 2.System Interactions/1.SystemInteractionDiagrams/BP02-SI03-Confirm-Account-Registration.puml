@@ -1,16 +1,17 @@
 @startuml
-title BP02 - SI03-Confirm Account Registration
 
-start
-:Receive activation request with token and password;
-:Validate registration token;
-:Validate password rules;
-if (Activation data valid?) then (yes)
-  :Activate customer account;
-  :Store credentials securely;
-else (no)
-  :Reject activation request;
-endif
-stop
+partition "BP02 - SI03-Confirm Account Registration" {
+  start
+  :Receive activation request with token and password;
+  :Validate registration token;
+  :Validate password rules;
+  if (Activation data valid?) then (yes)
+    :Activate customer account;
+    :Store credentials securely;
+  else (no)
+    :Reject activation request;
+  endif
+  stop
+}
 
 @enduml

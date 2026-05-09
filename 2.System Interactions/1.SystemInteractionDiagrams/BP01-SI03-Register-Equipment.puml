@@ -1,15 +1,16 @@
 @startuml
-title BP01 - SI03-Register Equipment
 
-start
-:Receive completed equipment registration form;
-:Validate required equipment information;
-if (Registration data valid?) then (yes)
-  :Create pending equipment registration;
-  :Forward registration for back-office check;
-else (no)
-  :Return validation errors;
-endif
-stop
+partition "BP01 - SI03-Register Equipment" {
+  start
+  :Receive completed equipment registration form;
+  :Validate required equipment information;
+  if (Registration data valid?) then (yes)
+    :Create pending equipment registration;
+    :Forward registration for back-office check;
+  else (no)
+    :Return validation errors;
+  endif
+  stop
+}
 
 @enduml

@@ -1,12 +1,13 @@
 @startuml
-title BP03 - SI03-Begin Enroll Maintenance Plan
 
-start
-:Receive selected equipment and provider;
-:Validate equipment ownership;
-:Create maintenance plan enrollment request;
-:Set request status to pending validation;
-:Forward request to back office;
-stop
+partition "BP03 - SI03-Begin Enroll Maintenance Plan" {
+  start
+  :Receive selected equipment and provider;
+  :Validate equipment ownership;
+  :Create maintenance plan enrollment request;
+  :Set request status to pending validation;
+  :Forward request to back office;
+  stop
+}
 
 @enduml

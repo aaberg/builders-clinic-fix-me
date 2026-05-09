@@ -13,6 +13,7 @@ The folder structure used in this project is:
 
 - Workflow BPMN files: `1.Workflows/1.WorkflowDiagrams /`
 - Workflow Markdown docs: `1.Workflows/`
+- System interaction Markdown docs: `2.System Interactions/`
 - System interaction PlantUML files: `2.System Interactions/1.SystemInteractionDiagrams/`
 - System interaction SVG files: `2.System Interactions/1.SystemInteractionDiagrams/`
 
@@ -111,22 +112,25 @@ BP01-SI01-Retrieve-Equipment-Types.puml
 
 Each `.puml` file should model what the system must do during that interaction. Keep diagrams concise and implementation-oriented.
 
+Use a top-level `partition` named with the BP/SI title instead of a standalone PlantUML `title`. Place `start` and `stop` inside the partition so the rendered SVG shows the whole interaction inside a frame.
+
 Template:
 
 ```plantuml
 @startuml
-title BP01 - SI01-Retrieve Equipment Types
 
-start
-:Receive request;
-:Validate required context;
-:Perform system action;
-if (Action succeeds) then (yes)
-  :Return success result;
-else (no)
-  :Return error or retry outcome;
-endif
-stop
+partition "BP01 - SI01-Retrieve Equipment Types" {
+  start
+  :Receive request;
+  :Validate required context;
+  :Perform system action;
+  if (Action succeeds) then (yes)
+    :Return success result;
+  else (no)
+    :Return error or retry outcome;
+  endif
+  stop
+}
 
 @enduml
 ```
@@ -137,7 +141,43 @@ PlantUML syntax notes:
 - End every action with `;`.
 - Use `if (...) then (yes)`, `else (no)`, and `endif` for decisions.
 - If a renderer rejects a question mark in an `if` label, rewrite it as a statement, for example `if (Information is complete) then (yes)`.
-- Keep titles aligned with BPMN and Markdown labels.
+- Keep partition names aligned with BPMN and Markdown labels.
+
+## System Interaction Markdown Documentation
+
+For each system interaction, create one Markdown file in `2.System Interactions/` named after the interaction diagram.
+
+Filename format:
+
+```text
+BP[number]-SI[number]-Name-With-Hyphens.md
+```
+
+Example:
+
+```text
+BP01-SI01-Retrieve-Equipment-Types.md
+```
+
+Each Markdown file should include:
+
+- Title using `BP## - SI##-Name`.
+- `Description`: short summary of the system interaction.
+- `Diagram`: embedded SVG from `1.SystemInteractionDiagrams/`.
+
+Use this structure:
+
+```markdown
+# BP01 - SI01-Retrieve Equipment Types
+
+## Description
+
+The system retrieves the available equipment types so the customer can choose the correct category before starting equipment registration.
+
+## Diagram
+
+![BP01 - SI01-Retrieve Equipment Types](1.SystemInteractionDiagrams/BP01-SI01-Retrieve-Equipment-Types.svg)
+```
 
 ## Rendering SVGs
 
@@ -179,7 +219,10 @@ After changes, verify:
 - Every workflow Markdown file lists the same SI labels as its BPMN file.
 - Every SI label has a matching `.puml` file.
 - Every `.puml` file has matching `@startuml` and `@enduml`.
+- Every `.puml` file uses a top-level `partition "BP## - SI##-Name"` instead of `title`.
+- Every `.puml` file has `start` and `stop` inside the partition.
 - Every `.puml` file has a matching `.svg` after rendering.
+- Every SI label has a matching Markdown file in `2.System Interactions/` with an embedded SVG.
 - No old labels remain with `SI-Name`, `SI.Name`, `Si.Name`, or numbered forms like `SI-01 Name`.
 
 Useful searches:
