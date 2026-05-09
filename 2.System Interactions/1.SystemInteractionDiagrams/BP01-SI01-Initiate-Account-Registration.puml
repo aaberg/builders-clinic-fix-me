@@ -1,0 +1,17 @@
+@startuml
+
+partition "BP01 - SI01-Initiate Account Registration" {
+  start
+  :Receive customer email address;
+  :Validate email format;
+  :Check whether account already exists;
+  if (Account can be created?) then (yes)
+    :Create pending account registration;
+    :Generate registration confirmation token;
+  else (no)
+    :Return registration error;
+  endif
+  stop
+}
+
+@enduml

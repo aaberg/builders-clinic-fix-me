@@ -24,8 +24,8 @@ Important: `1.WorkflowDiagrams ` has a trailing space in the directory name. Alw
 
 For each BPMN file, create or update a Markdown file in `1.Workflows/` named after the workflow, for example:
 
-- BPMN: `1.Workflows/1.WorkflowDiagrams /BP01-RegisterEquipment.bpmn`
-- Markdown: `1.Workflows/BP01-RegisterEquipment.md`
+- BPMN: `1.Workflows/1.WorkflowDiagrams /BP01-OnboardCustomer.bpmn`
+- Markdown: `1.Workflows/BP01-OnboardCustomer.md`
 
 Each Markdown file should include:
 
@@ -38,9 +38,9 @@ Each Markdown file should include:
 Use this structure:
 
 ```markdown
-# BP01 - Register Equipment
+# BP01 - Onboard Customer
 
-Source diagram: `1.WorkflowDiagrams /BP01-RegisterEquipment.bpmn`
+Source diagram: `1.WorkflowDiagrams /BP01-OnboardCustomer.bpmn`
 
 ## Workflow Description
 
@@ -52,7 +52,7 @@ Source diagram: `1.WorkflowDiagrams /BP01-RegisterEquipment.bpmn`
 
 ## System Interactions
 
-- SI01-Retrieve Equipment Types
+- SI01-Initiate Account Registration
 ```
 
 ## System Interaction Naming
@@ -103,8 +103,8 @@ Render all current workflow diagrams:
 
 ```bash
 npx --yes bpmn-to-image \
-  "1.Workflows/1.WorkflowDiagrams /BP01-RegisterEquipment.bpmn:1.Workflows/1.WorkflowDiagrams /BP01-RegisterEquipment.svg" \
-  "1.Workflows/1.WorkflowDiagrams /BP02-OnboardCustomer.bpmn:1.Workflows/1.WorkflowDiagrams /BP02-OnboardCustomer.svg" \
+  "1.Workflows/1.WorkflowDiagrams /BP01-OnboardCustomer.bpmn:1.Workflows/1.WorkflowDiagrams /BP01-OnboardCustomer.svg" \
+  "1.Workflows/1.WorkflowDiagrams /BP02-RegisterEquipment.bpmn:1.Workflows/1.WorkflowDiagrams /BP02-RegisterEquipment.svg" \
   "1.Workflows/1.WorkflowDiagrams /BP03-EnrollMaintenancePlan.bpmn:1.Workflows/1.WorkflowDiagrams /BP03-EnrollMaintenancePlan.svg" \
   "1.Workflows/1.WorkflowDiagrams /BP04-ScheduleMaintenanceSlot.bpmn:1.Workflows/1.WorkflowDiagrams /BP04-ScheduleMaintenanceSlot.svg" \
   "1.Workflows/1.WorkflowDiagrams /BP05-CancelMaintenanceSlot.bpmn:1.Workflows/1.WorkflowDiagrams /BP05-CancelMaintenanceSlot.svg"
@@ -140,7 +140,7 @@ BP[number]-SI[number]-Name-With-Hyphens.puml
 Example:
 
 ```text
-BP01-SI01-Retrieve-Equipment-Types.puml
+BP01-SI01-Initiate-Account-Registration.puml
 ```
 
 Each `.puml` file should model what the system must do during that interaction. Keep diagrams concise and implementation-oriented.
@@ -152,7 +152,7 @@ Template:
 ```plantuml
 @startuml
 
-partition "BP01 - SI01-Retrieve Equipment Types" {
+partition "BP01 - SI01-Initiate Account Registration" {
   start
   :Receive request;
   :Validate required context;
@@ -189,7 +189,7 @@ BP[number]-SI[number]-Name-With-Hyphens.md
 Example:
 
 ```text
-BP01-SI01-Retrieve-Equipment-Types.md
+BP01-SI01-Initiate-Account-Registration.md
 ```
 
 Each Markdown file should include:
@@ -201,15 +201,15 @@ Each Markdown file should include:
 Use this structure:
 
 ```markdown
-# BP01 - SI01-Retrieve Equipment Types
+# BP01 - SI01-Initiate Account Registration
 
 ## Description
 
-The system retrieves the available equipment types so the customer can choose the correct category before starting equipment registration.
+The system starts account registration from the customer's email address.
 
 ## Diagram
 
-![BP01 - SI01-Retrieve Equipment Types](1.SystemInteractionDiagrams/BP01-SI01-Retrieve-Equipment-Types.svg)
+![BP01 - SI01-Initiate Account Registration](1.SystemInteractionDiagrams/BP01-SI01-Initiate-Account-Registration.svg)
 ```
 
 ## Rendering SVGs
