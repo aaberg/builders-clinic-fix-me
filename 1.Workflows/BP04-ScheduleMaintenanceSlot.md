@@ -16,9 +16,9 @@ The intention is to coordinate customer, system, contractor, and back-office act
 
 ## System Interactions
 
-- SI01-Start Schedule Maintenance Slot
-- SI02-Set Maintenance Slot Time
-- SI03-Notify Customer Of Available Slot
-- SI04-Approve Maintenance Slot
-- SI05-Notify Maintenance Slot Confirmation
-- SI06-Decline Maintenance Slot
+- [SI01-Start Schedule Maintenance Slot](../2.System Interactions/BP04-SI01-Start-Schedule-Maintenance-Slot.md)
+- [SI02-Set Maintenance Slot Time](../2.System Interactions/BP04-SI02-Set-Maintenance-Slot-Time.md)
+- [SI03-Notify Customer Of Available Slot](../2.System Interactions/BP04-SI03-Notify-Customer-Of-Available-Slot.md)
+- [SI04-Approve Maintenance Slot](../2.System Interactions/BP04-SI04-Approve-Maintenance-Slot.md)
+- [SI05-Notify Maintenance Slot Confirmation](../2.System Interactions/BP04-SI05-Notify-Maintenance-Slot-Confirmation.md)
+- [SI06-Decline Maintenance Slot](../2.System Interactions/BP04-SI06-Decline-Maintenance-Slot.md)
