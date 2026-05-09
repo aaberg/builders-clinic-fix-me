@@ -1,0 +1,17 @@
+@startuml
+
+partition "BP06 - SI01-Setup Direct Communication" {
+  start
+  :Receive direct communication setup request;
+  :Validate customer and provider context;
+  :Create WhatsApp communication channel;
+  if (Channel is created) then (yes)
+    :Store channel reference;
+    :Return channel created result;
+  else (no)
+    :Return channel setup error;
+  endif
+  stop
+}
+
+@enduml

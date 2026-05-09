@@ -1,0 +1,16 @@
+@startuml
+
+partition "BP06 - SI03-Forward Message" {
+  start
+  :Receive provider message from WhatsApp channel;
+  :Validate channel and recipient customer;
+  :Forward message to customer;
+  if (Forwarding succeeds) then (yes)
+    :Record forwarded provider message;
+  else (no)
+    :Record forwarding failure;
+  endif
+  stop
+}
+
+@enduml
