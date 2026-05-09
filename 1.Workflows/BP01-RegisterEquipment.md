@@ -2,6 +2,10 @@
 
 Source diagram: `1.WorkflowDiagrams /BP01-RegisterEquipment.bpmn`
 
+## Workflow Diagram
+
+![BP01 - Register Equipment](1.WorkflowDiagrams%20/BP01-RegisterEquipment.svg)
+
 ## Workflow Description
 
 This workflow lets a customer register new equipment. The customer requests registration, selects an equipment type, fills in the registration form, and submits the equipment for registration. The system retrieves the required data and form, registers the equipment, and coordinates with a back-office representative for validation before finalizing the equipment record and notifying the customer.

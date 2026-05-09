@@ -12,6 +12,7 @@ Use this skill when a project contains BPMN workflow diagrams and the user wants
 The folder structure used in this project is:
 
 - Workflow BPMN files: `1.Workflows/1.WorkflowDiagrams /`
+- Workflow BPMN SVG files: `1.Workflows/1.WorkflowDiagrams /`
 - Workflow Markdown docs: `1.Workflows/`
 - System interaction Markdown docs: `2.System Interactions/`
 - System interaction PlantUML files: `2.System Interactions/1.SystemInteractionDiagrams/`
@@ -93,6 +94,38 @@ name="[^"]*[Ss][Ii][\.\- ]?[^"]+"
 ```
 
 Use the order in the workflow flow where possible. If XML order differs from visible process order, use the logical business sequence from the diagram.
+
+## Rendering Workflow BPMN SVGs
+
+Use `npx bpmn-to-image` to render `.bpmn` workflow diagrams to `.svg` files in the same `1.Workflows/1.WorkflowDiagrams /` folder. The BPMN files include BPMN DI layout data, so this preserves the authored diagram layout.
+
+Render all current workflow diagrams:
+
+```bash
+npx --yes bpmn-to-image \
+  "1.Workflows/1.WorkflowDiagrams /BP01-RegisterEquipment.bpmn:1.Workflows/1.WorkflowDiagrams /BP01-RegisterEquipment.svg" \
+  "1.Workflows/1.WorkflowDiagrams /BP02-OnboardCustomer.bpmn:1.Workflows/1.WorkflowDiagrams /BP02-OnboardCustomer.svg" \
+  "1.Workflows/1.WorkflowDiagrams /BP03-EnrollMaintenancePlan.bpmn:1.Workflows/1.WorkflowDiagrams /BP03-EnrollMaintenancePlan.svg" \
+  "1.Workflows/1.WorkflowDiagrams /BP04-ScheduleMaintenanceSlot.bpmn:1.Workflows/1.WorkflowDiagrams /BP04-ScheduleMaintenanceSlot.svg" \
+  "1.Workflows/1.WorkflowDiagrams /BP05-CancelMaintenanceSlot.bpmn:1.Workflows/1.WorkflowDiagrams /BP05-CancelMaintenanceSlot.svg"
+```
+
+Notes:
+
+- Always quote paths because `1.WorkflowDiagrams ` has a trailing space.
+- `npx --yes bpmn-to-image` downloads and runs the BPMN renderer without adding a project dependency.
+- `bpmn-to-image` can also render PNG by changing or adding `.png` output paths.
+
+Verify workflow SVG output:
+
+```bash
+glob "*.svg" path="/home/lars/dev/builders-clinic/1.Workflows/1.WorkflowDiagrams "
+```
+
+Expected workflow SVG result for this project after the latest pass:
+
+- 5 `.bpmn` files.
+- 5 workflow `.svg` files in the same folder.
 
 ## PlantUML Activity Diagrams
 
@@ -216,6 +249,7 @@ Expected result for this project after the latest pass:
 After changes, verify:
 
 - Every BPMN `SI` label uses `SI##-Name`.
+- Every workflow `.bpmn` file has a same-folder `.svg` rendered with `npx bpmn-to-image`.
 - Every workflow Markdown file lists the same SI labels as its BPMN file.
 - Every SI label has a matching `.puml` file.
 - Every `.puml` file has matching `@startuml` and `@enduml`.
