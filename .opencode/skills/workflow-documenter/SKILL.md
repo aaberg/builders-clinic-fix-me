@@ -27,6 +27,8 @@ For each BPMN file, create or update a Markdown file in `1.Workflows/` named aft
 - BPMN: `1.Workflows/1.WorkflowDiagrams /BP01-OnboardCustomer.bpmn`
 - Markdown: `1.Workflows/BP01-OnboardCustomer.md`
 
+Also keep the root `README.md` workflow index in sync. Every workflow Markdown file in `1.Workflows/` should have a matching flat bullet link under `## Workflows`, using the title format `BP## - Readable Name` and a relative path such as `1.Workflows/BP01-OnboardCustomer.md`.
+
 Each Markdown file should include:
 
 - Title using the workflow code and readable name.
@@ -275,6 +277,7 @@ After changes, verify:
 
 - Every BPMN `SI` label uses `SI##-Name`.
 - Every workflow `.bpmn` file has a same-folder `.svg` rendered with `npx bpmn-to-image`.
+- Every workflow Markdown file is linked from the root `README.md` workflow index.
 - Every workflow Markdown file lists the same SI labels as its BPMN file.
 - Every SI label has a matching `.puml` file.
 - Every `.puml` file has matching `@startuml` and `@enduml`.
